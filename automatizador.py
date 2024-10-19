@@ -1,6 +1,7 @@
 import pyautogui
 import time
 
+
 # Passo 1 - Entrar no Site
 
 pyautogui.PAUSE = 1
@@ -18,6 +19,7 @@ pyautogui.click(x=652, y=54)
 pyautogui.write("WWW.SITEDAEMPRESA.COM")
 
 pyautogui.press("enter")
+
 
 # Passo 2 - Fazer login
 
@@ -37,13 +39,14 @@ pyautogui.press("tab")
 
 pyautogui.press("enter")
 
+
 # Passo 3 - Importar a Base de Dados
 
 import pandas
-
 # O COMANDO READ LERÁ A BASE DE DADOS QUE VOCê POSSUI. DEVE SER USADO DE ACORDO COM O TIPO DE ARQUIVO DA BASE DE DADOS, PORTANTO O FORMATO SERÁ: pandas.read_tipodoarquivo("Nome do Arquivo")
 # Veja o exemplo abaixo:
 tabela = pandas.read_csv("produtos.csv")
+
 
 # Passo 4 - Repetir o proceso de cadastro até acabarem os produtos
 
@@ -105,6 +108,7 @@ while True:
 
     linha = linha + 1
 
+    # ATENÇÃO!!! PARA O SCRIPT SE ENCERRAR, COLOQUE O NÚMERO DE LINHAS QUE A BASE DE DADOS POSSUI NO LUGAR DE "295", QUE É UM NÚMERO EXEMPLO!
     if linha == 295:
         break
     continue
